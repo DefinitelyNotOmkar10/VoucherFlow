@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../AuthContext';
 import { api } from '../api';
+import { LiquidButton } from '../components/ui/liquid-glass-button';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -41,9 +42,10 @@ export default function Login() {
             <label>Password</label>
             <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
           </div>
-          <button type="submit" className="btn btn-primary" style={{ width: '100%' }} disabled={loading}>
-            {loading ? 'Signing in…' : 'Sign In'}
-          </button>
+          <LiquidButton type="submit" className="login-submit" disabled={loading}>
+            <span>{loading ? 'Signing in…' : 'Sign in'}</span>
+            <span className="liquid-glass-button__arrow" aria-hidden="true">↗</span>
+          </LiquidButton>
         </form>
       </div>
     </div>

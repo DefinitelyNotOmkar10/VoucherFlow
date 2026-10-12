@@ -31,7 +31,7 @@ export default function Dashboard() {
             <div className="card"><div className="card-value">&#8377;{Number(data.total_amount_claimed).toFixed(2)}</div><div className="card-label">Amount Claimed</div></div>
           </div>
           <div style={{ marginTop: '1.5rem' }}>
-            <Link to="/vouchers/new" className="btn btn-primary">+ New Voucher</Link>
+            <Link to="/vouchers/new" className="liquid-glass-link"><span>New voucher</span><span className="liquid-glass-button__arrow" aria-hidden="true">↗</span></Link>
           </div>
         </>
       )}

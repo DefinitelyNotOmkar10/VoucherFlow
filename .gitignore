@@ -1,0 +1,9 @@
+# dependencies
+node_modules/
+
+# environment files
+.env
+
+# uploaded signature files (keep folder structure)
+server/uploads/*
+!server/uploads/.gitkeep
